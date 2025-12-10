@@ -53,12 +53,5 @@ export const MASTER_STUDENTS: Student[] = [
 ];
 
 export const UNDERGRADUATE_STUDENTS: Student[] = [
-  {
-    image: "/people/students/juseung-lee.jpg",
-    name: "Juseung Lee",
-    github: "https://github.com/gitchobo-lee",
-  },
-  {
-    name: "Sungho Jo",
-  },
+
 ];
