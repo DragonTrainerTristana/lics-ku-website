@@ -5,14 +5,14 @@ export const PHDALUMNIS: Alumni[] = [
     image: "/people/students/heesoo-kim.jpg",
     name: "Heesoo Kim",
     website: "https://github.com/happywater12",
-    field: "고려대학교 박사후연구원",
+    field: "Postdoctoral Researcher, Korea University",
   },
   {
     image: "/people/students/hongki-kim.jpg",
     name: "Hong Ki Kim",
     website:
       "https://ihatemushroom.notion.site/About-Hong-Ki-Kim-129a76a7e22e80139125c0f2d66d2d09",
-    field: "삼성전자 MX 사업부",
+    field: "Samsung Electronics, MX Division",
   },
 ];
 
@@ -21,7 +21,7 @@ export const MSALUMNIS: Alumni[] = [
     image: "/people/alumni/minji-kim.jpg",
     name: "Minji Kim",
     website: "https://github.com/kimminji1013",
-    field: "현대오토에버",
+    field: "Hyundai AutoEver",
   },
   {
     image: "/people/alumni/soohyeok-park.jpg",
@@ -32,7 +32,7 @@ export const MSALUMNIS: Alumni[] = [
     image: "/people/alumni/yunjae-choi.jpg",
     name: "Yunjae Choi",
     website: "https://github.com/YunjaeChoi",
-    field: "삼성 리서치",
+    field: "Samsung Research",
   },
   {
     image: "/people/alumni/sunho-kim.jpg",
@@ -44,7 +44,7 @@ export const MSALUMNIS: Alumni[] = [
     image: "/people/alumni/yoonku-lee.jpg",
     name: "Yoon Ku Lee",
     website: "https://www.linkedin.com/in/yoon-ku-lee/",
-    field: "삼성전자 DX 사업부",
+    field: "Samsung Electronics, DX Division",
   },
 ];
 
