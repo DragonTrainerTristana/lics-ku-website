@@ -25,7 +25,7 @@ export const MainAnnouncement = () => {
           {MAIN_ANNOUNCEMENT.title}
         </h4>
         <p className="text-xs lg:text-sm text-left md:text-center whitespace-pre-line">
-          {MAIN_ANNOUNCEMENT.message}
+          {MAIN_ANNOUNCEMENT.messages.join("\n")}
         </p>
       </div>
       <Button
