@@ -46,11 +46,6 @@ export const PHD_STUDENTS: Student[] = [
 
 export const MASTER_STUDENTS: Student[] = [
   {
-    image: "/people/students/youngjin-song.jpg",
-    name: "Youngjin Song",
-    linkedin: "https://www.linkedin.com/in/youngjinsong4090/",
-  },
-  {
     image: "/people/students/seungeui-byun.jpg",
     name: "Seungui Byun",
     email: "shoreview01@korea.ac.kr",
@@ -58,6 +53,7 @@ export const MASTER_STUDENTS: Student[] = [
   },
   {
     name: "SeungKwan Oh",
+    image: "/people/students/SeungGwan.jpeg",
   },
   
 ];

@@ -18,6 +18,12 @@ export const PHDALUMNIS: Alumni[] = [
 
 export const MSALUMNIS: Alumni[] = [
   {
+    image: "/people/students/youngjin-song.jpg",
+    name: "Youngjin Song",
+    website: "https://www.linkedin.com/in/youngjinsong4090/",
+    field: "SK Telecom",
+  },
+  {
     image: "/people/alumni/minji-kim.jpg",
     name: "Minji Kim",
     website: "https://github.com/kimminji1013",
