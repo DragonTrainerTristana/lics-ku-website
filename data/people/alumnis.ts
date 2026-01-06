@@ -38,7 +38,7 @@ export const MSALUMNIS: Alumni[] = [
     image: "/people/alumni/sunho-kim.jpg",
     name: "Sunho Kim",
     website: "https://github.com/Preference-Kim",
-    field: "전문연구요원",
+    field: "Special Research Agent",
   },
   {
     image: "/people/alumni/yoonku-lee.jpg",
