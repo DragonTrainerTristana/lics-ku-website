@@ -13,8 +13,8 @@ export const Footer = () => {
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
               Korea University, <br />
-              Seoul 08826, Korea College of Engineering
-              <br /> 145 Anam-ro, Seongbuk-gu, Seoul, 02841
+              Seoul 02841, Korea University of Engineering
+              <br /> 145 Anam-ro, Seongbuk-gu
             </p>
           </div>
 
@@ -30,10 +30,9 @@ export const Footer = () => {
                   href="mailto:lics@korea.ac.kr"
                   className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
-                  lics@korea.ac.kr
+                  sanghyunlee@korea.ac.kr
                 </a>
               </p>
-              <p>Phone: +82-2-880-1234</p>
               <p>고려대학교 자연계 캠퍼스 신공학관 534호</p>
             </div>
           </div>
