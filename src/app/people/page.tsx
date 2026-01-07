@@ -22,7 +22,7 @@ const PeoplePage = () => {
           <div className="flex w-full flex-col items-center md:items-start">
             <h3 className="text-2xl font-bold">Sang Hyun Lee</h3>
             <p className="text-lg text-gray-500 dark:text-gray-400">
-              Associate Professor
+              Professor
             </p>
           </div>
           <div className="flex w-full flex-col items-center md:items-start">

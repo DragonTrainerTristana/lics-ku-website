@@ -30,7 +30,7 @@ export const PROFESSOR_EXPERIENCES: Experience[] = [
     institution: "Pusan National University, Busan, Korea",
   },
   {
-    title: "Assistant Professor, Korea University, Seoul, Korea",
+    title: "Professor, Korea University, Seoul, Korea",
     date: "2017 - Present",
     institution: "Korea University, Seoul, Korea",
   },

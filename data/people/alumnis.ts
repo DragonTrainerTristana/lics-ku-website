@@ -5,7 +5,7 @@ export const PHDALUMNIS: Alumni[] = [
     image: "/people/students/heesoo-kim.jpg",
     name: "Heesoo Kim",
     website: "https://github.com/happywater12",
-    field: "Postdoctoral Researcher, Korea University",
+    field: "Postdoctoral Researcher, Center for ICT & Society, Korea University",
   },
   {
     image: "/people/students/hongki-kim.jpg",
