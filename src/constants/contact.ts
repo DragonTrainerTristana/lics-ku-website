@@ -13,7 +13,7 @@ export const CONTACT = {
   labRoom: "New Engineering Hall (신공학관), Room 534",
   tel: "+82-2-3290-3218",
   fax: "+82-2-921-0544",
-  professorEmail: "sanghyunlee@korea.ac.kr",
+  professorEmail: "felix9698@korea.ac.kr",
   addressLines: [
     "Korea University",
     "145 Anam-ro, Seongbuk-gu",
