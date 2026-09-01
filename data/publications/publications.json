@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T13:11:43.047Z",
+  "updatedAt": "2026-09-01T08:36:14.208Z",
   "papers": [
     {
       "id": "legacy:book-chapter-001",
@@ -2082,6 +2082,25 @@
       "venue": "한국통신학회논문지",
       "doi": "10.7840/kics.2019.44.12.2284",
       "url": "https://doi.org/10.7840/kics.2019.44.12.2284",
+      "status": "verified",
+      "source": "openalex"
+    },
+    {
+      "id": "doi:10.1109/ictc66702.2025.11387903",
+      "type": "conference",
+      "title": "A Digital Twin Simulator for Physics-Inspired AI in 6G Wireless Networks",
+      "authors": [
+        "Seung Hyun Oh",
+        "Wookjin Lee",
+        "Youngjin Song",
+        "Jung Bum Lee",
+        "Gun Seok Kim",
+        "Sang Hyun Lee"
+      ],
+      "year": 2025,
+      "venue": null,
+      "doi": "10.1109/ictc66702.2025.11387903",
+      "url": "https://doi.org/10.1109/ictc66702.2025.11387903",
       "status": "verified",
       "source": "openalex"
     }
