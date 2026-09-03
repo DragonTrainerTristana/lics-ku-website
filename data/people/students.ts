@@ -21,7 +21,7 @@ export const PHD_STUDENTS: Student[] = [
   {
     image: "/people/students/wonyoung-kang.jpg",
     name: "Won-Young Kang",
-    website: "https://github.com/dogs0667LICS",
+    github: "https://github.com/dogs0667LICS",
   },
   {
     image: "/people/students/seunghyun-oh.jpg",
@@ -40,6 +40,10 @@ export const PHD_STUDENTS: Student[] = [
     image: "/people/students/gun-kim.jpg",
     name: "Gun Kim",
     github: "https://github.com/brandonkims",
+  },
+  {
+    image: "/people/students/gwangsung-kim.jpg",
+    name: "GwangSung Kim",
   },
 ];
 
