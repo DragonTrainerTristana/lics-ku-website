@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { ExternalLink, Search } from "lucide-react";
 
 import type { Paper, PublicationsData } from "@data/publications/schema";
@@ -53,6 +53,41 @@ const paperToEntry = (p: Paper): Entry => ({
 export function PublicationsExplorer({ data }: { data: PublicationsData }) {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<"all" | Kind>("all");
+  const filterBarRef = useRef<HTMLDivElement>(null);
+  const [pillReady, setPillReady] = useState(false);
+
+  // Slide one crimson pill under the active filter (transitions.dev "tabs
+  // sliding"). Resizes snap without animating; the buttons keep their own
+  // crimson background until the pill has been placed, so SSR looks right.
+  const placePill = (animate: boolean) => {
+    const bar = filterBarRef.current;
+    const pill = bar?.querySelector<HTMLElement>("[data-filter-pill]");
+    const btn = bar?.querySelector<HTMLElement>('[aria-pressed="true"]');
+    if (!pill || !btn) return;
+    if (!animate) pill.style.transition = "none";
+    pill.style.transform = `translate(${btn.offsetLeft}px, ${btn.offsetTop}px)`;
+    pill.style.width = `${btn.offsetWidth}px`;
+    pill.style.height = `${btn.offsetHeight}px`;
+    if (!animate) {
+      void pill.offsetWidth;
+      pill.style.transition = "";
+    }
+  };
+
+  useLayoutEffect(() => {
+    placePill(pillReady);
+    setPillReady(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter]);
+
+  useLayoutEffect(() => {
+    const bar = filterBarRef.current;
+    if (!bar) return;
+    const ro = new ResizeObserver(() => placePill(false));
+    ro.observe(bar);
+    return () => ro.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const entries = useMemo<Entry[]>(() => {
     const papers = data.papers.map(paperToEntry);
@@ -115,7 +150,15 @@ export function PublicationsExplorer({ data }: { data: PublicationsData }) {
               className="h-11 pl-9"
             />
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div ref={filterBarRef} className="relative flex flex-wrap gap-2">
+            <span
+              data-filter-pill
+              aria-hidden="true"
+              className={cn(
+                "absolute left-0 top-0 rounded-full bg-crimson",
+                !pillReady && "invisible"
+              )}
+            />
             {FILTERS.map((f) => {
               const active = filter === f.value;
               return (
@@ -126,9 +169,12 @@ export function PublicationsExplorer({ data }: { data: PublicationsData }) {
                   aria-pressed={active}
                   aria-controls="publication-results"
                   className={cn(
-                    "inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                    "relative inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                     active
-                      ? "border-crimson bg-crimson text-crimson-foreground"
+                      ? cn(
+                          "border-crimson text-crimson-foreground",
+                          !pillReady && "bg-crimson"
+                        )
                       : "border-border text-muted-foreground hover:border-crimson/40 hover:text-foreground"
                   )}
                 >
@@ -172,7 +218,11 @@ export function PublicationsExplorer({ data }: { data: PublicationsData }) {
                   <h2 className="display text-3xl text-foreground">
                     {year === "undated" ? "Undated" : year}
                   </h2>
-                  <span className="font-mono text-xs text-muted-foreground">
+                  <span
+                    key={items.length}
+                    data-digit-pop
+                    className="font-mono text-xs text-muted-foreground"
+                  >
                     {String(items.length).padStart(2, "0")}
                   </span>
                 </div>
