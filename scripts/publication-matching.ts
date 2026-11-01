@@ -423,11 +423,17 @@ export function findKnownDuplicateByMetadata(
   paper: Paper,
   existingPapers: Paper[],
 ): DuplicateMatch | null {
+  // Only reached for works a human listed as duplicates, so an identical title
+  // may also absorb OpenAlex's off-by-one proceedings year (VTC 2003 → 2004).
   const existing = existingPapers.find((candidate) => (
-    candidate.year === paper.year &&
-    candidate.type === paper.type &&
-    authorsEquivalent(candidate.authors, paper.authors) &&
-    venuesEquivalent(candidate.venue, paper.venue)
+    candidate.type === paper.type && (
+      (candidate.year === paper.year &&
+        authorsEquivalent(candidate.authors, paper.authors) &&
+        venuesEquivalent(candidate.venue, paper.venue)) ||
+      (normalizeTitle(candidate.title) === normalizeTitle(paper.title) &&
+        candidate.year !== null && paper.year !== null &&
+        Math.abs(candidate.year - paper.year) <= 1)
+    )
   ));
   return existing ? { paper: existing, reason: "known-metadata" } : null;
 }

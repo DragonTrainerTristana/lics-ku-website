@@ -25,7 +25,7 @@ import {
 
 interface OpenAlexResponse {
   results: OpenAlexWork[];
-  meta?: { next_cursor?: string | null };
+  meta?: { count?: number };
 }
 
 interface Logger {
@@ -149,32 +149,45 @@ async function readJson(file: string): Promise<unknown> {
   return JSON.parse(await readFile(file, "utf8"));
 }
 
-export async function fetchWorksFromOpenAlex(author: AuthorConfig, authorId: string): Promise<OpenAlexWork[]> {
-  const works: OpenAlexWork[] = [];
-  let cursor = "*";
+// Page-number paging: since late 2026 OpenAlex rejects cursor paging past the
+// first page without an API key (401). Page paging works keyless up to 10,000
+// results, far above any author here. An optional OPENALEX_API_KEY (GitHub
+// secret) gives the run its own $1/day budget instead of the shared per-IP one.
+const PER_PAGE = 100;
 
-  do {
+export async function fetchWorksFromOpenAlex(author: AuthorConfig, authorId: string): Promise<OpenAlexWork[]> {
+  const works = new Map<string, OpenAlexWork>();
+  const headers: Record<string, string> = { "User-Agent": "LICS-publications-updater/2.0" };
+  if (process.env.OPENALEX_API_KEY) headers.Authorization = `Bearer ${process.env.OPENALEX_API_KEY}`;
+  let total = 0;
+
+  for (let pageNumber = 1; pageNumber === 1 || (pageNumber - 1) * PER_PAGE < total; pageNumber++) {
     const url = new URL("https://api.openalex.org/works");
     url.searchParams.set("filter", `author.id:${authorId}`);
-    url.searchParams.set("per-page", "200");
-    url.searchParams.set("cursor", cursor);
+    url.searchParams.set("per-page", String(PER_PAGE));
+    url.searchParams.set("page", String(pageNumber));
     url.searchParams.set("sort", "publication_date:desc");
-    url.searchParams.set("mailto", "lics@korea.ac.kr");
 
-    const response = await fetch(url, {
-      headers: { "User-Agent": "LICS-publications-updater/2.0 (lics@korea.ac.kr)" },
-    });
-    if (!response.ok) throw new Error(`OpenAlex ${response.status} for ${author.name} (${authorId})`);
+    const response = await fetch(url, { headers });
+    if (!response.ok) {
+      const detail = (await response.text().catch(() => "")).slice(0, 300);
+      throw new Error(`OpenAlex ${response.status} for ${author.name} (${authorId}): ${detail}`);
+    }
 
     const page = (await response.json()) as OpenAlexResponse;
-    if (!Array.isArray(page.results)) {
+    if (!Array.isArray(page.results) || typeof page.meta?.count !== "number") {
       throw new Error(`Invalid OpenAlex response for ${author.name} (${authorId})`);
     }
-    works.push(...page.results);
-    cursor = page.meta?.next_cursor ?? "";
-  } while (cursor);
+    if (pageNumber === 1) total = page.meta.count;
+    for (const work of page.results) works.set(work.id, work);
+    if (page.results.length < PER_PAGE) break;
+  }
 
-  return works;
+  // A short read would silently drop papers; fail so publications.json stays untouched.
+  if (works.size < total) {
+    throw new Error(`OpenAlex returned ${works.size}/${total} works for ${author.name} (${authorId})`);
+  }
+  return [...works.values()];
 }
 
 export async function writePublicationsAtomically(

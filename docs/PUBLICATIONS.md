@@ -76,5 +76,6 @@ npm run build
 수집은 모든 OpenAlex 호출과 판정을 마친 뒤 임시 파일을 원자적으로 교체합니다. 네트워크 오류, 잘못된 JSON, 쓰기 오류가 나면 기존 `publications.json`은 바뀌지 않습니다.
 
 - OpenAlex 네트워크 오류라면 다음 정기 실행을 기다리거나 Actions의 **Run workflow**를 눌러 다시 실행합니다.
+- 로그에 `OpenAlex 401`이나 `429`가 보이면 OpenAlex 사용량 제한입니다. API 키 없이는 같은 IP를 쓰는 모든 사용자가 하루 무료 한도를 나눠 쓰므로, https://openalex.org/settings/api 에서 무료 키를 발급받아 GitHub 레포 **Settings → Secrets and variables → Actions**에 `OPENALEX_API_KEY`라는 이름으로 등록하면 전용 한도($1/일, 이 수집의 수천 배)로 실행됩니다.
 - `authors.json` 또는 `publications.json` 형식 오류라면 최근 수정 내용을 되돌려 유효한 JSON인지 확인합니다.
 - 목록 파일이 손상되어도 사이트는 기존 TypeScript 레거시 목록으로 대체해 표시합니다. 복구 후 위 세 명령을 다시 실행합니다.

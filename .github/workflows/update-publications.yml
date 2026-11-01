@@ -23,6 +23,9 @@ jobs:
       - run: npm ci
       - run: npm run test:pubs
       - run: npm run update:pubs
+        env:
+          # Optional. Without it OpenAlex uses a shared per-IP free budget.
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
 
       - id: publications
         if: ${{ !cancelled() }}

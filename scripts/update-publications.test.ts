@@ -259,6 +259,31 @@ test("skips a configured translated duplicate OpenAlex work", async (t) => {
   assert.equal((JSON.parse(await readFile(files.publicationsPath, "utf8")) as PublicationsData).papers.length, 1);
 });
 
+test("skips a configured duplicate whose OpenAlex year is off by one", async (t) => {
+  const files = await fixture([], {
+    knownDuplicateOpenAlexWorkIds: ["W9999999999"],
+  } as Partial<AuthorConfig>);
+  t.after(() => rm(files.directory, { recursive: true, force: true }));
+
+  const summary = await runPublicationUpdate({
+    publicationsPath: files.publicationsPath,
+    authorsPath: files.authorsPath,
+    currentMemberNames: [],
+    fetchWorks: async () => [candidate({
+      id: "W9999999999",
+      title: "Existing 2026 Wireless Publication",
+      coauthors: ["Hong Ki Kim"],
+      topic: "Advanced Wireless Communication",
+      year: 2027,
+      venue: "IEEE Global Communications Conference",
+    })],
+    logger: silentLogger,
+  });
+
+  assert.equal(summary.changed, false);
+  assert.equal(summary.duplicates, 1);
+});
+
 test("does not skip an allowlisted work when its metadata no longer matches", async (t) => {
   const files = await fixture([], {
     knownDuplicateOpenAlexWorkIds: ["W9999999999"],

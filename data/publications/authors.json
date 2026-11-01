@@ -3,7 +3,7 @@
     "name": "Sang Hyun Lee",
     "openAlexAuthorIds": ["A5100460354"],
     "secondaryOpenAlexAuthorIds": ["A5100460359"],
-    "knownDuplicateOpenAlexWorkIds": ["W2749129638"],
+    "knownDuplicateOpenAlexWorkIds": ["W2749129638", "W2128218509"],
     "orcid": "0000-0001-5385-2061",
     "institutionId": "I197347611",
     "institutionName": "Korea University",
@@ -95,6 +95,10 @@
         {
           "workId": "W2749129638",
           "evidence": "legacy:journal-038과 저자·연도·venue가 같은 논문의 일본어 번역 메타데이터"
+        },
+        {
+          "workId": "W2128218509",
+          "evidence": "legacy:conference-032(VTC-Spring 2003)와 제목·저자가 같고 DOI가 10.1109/vetecs.2003.1207151; OpenAlex만 2004년으로 기록 (2026-11-01 확인)"
         }
       ],
       "candidates": [
