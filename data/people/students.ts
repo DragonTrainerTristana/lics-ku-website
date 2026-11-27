@@ -57,6 +57,6 @@ export const MASTER_STUDENTS: Student[] = [
 ];
 
 export const UNDERGRADUATE_STUDENTS: Student[] = [
-  { name: "Seo Yunseo" },
-  { name: "Shin Hyemin" },
+  { name: "Yunseo Seo" },
+  { name: "Hyemin Shin" },
 ];
