@@ -48,7 +48,8 @@ export const MASTER_STUDENTS: Student[] = [
     image: "/people/students/seungeui-byun.jpg",
     name: "Seungeui Byun",
     email: "shoreview01@korea.ac.kr",
-    github: "https://github.com/shoreview01",
+    github: "https://github.com/seungeuibyun",
+    website: "https://seungeuibyun.github.io/",
   },
   {
     image: "/people/students/seunggwan-oh.jpg",
