@@ -4,6 +4,7 @@
     "openAlexAuthorIds": ["A5100460354"],
     "secondaryOpenAlexAuthorIds": ["A5100460359"],
     "knownDuplicateOpenAlexWorkIds": ["W2749129638", "W2128218509"],
+    "excludedOpenAlexWorkIds": ["W7138830602"],
     "orcid": "0000-0001-5385-2061",
     "institutionId": "I197347611",
     "institutionName": "Korea University",
@@ -91,6 +92,12 @@
       "checkedAt": "2026-08-11",
       "method": "OpenAlex author metadata의 ORCID·소속·topics를 확인하고, 각 후보의 전체 works를 기존 verified 제목 및 공저자와 대조",
       "targetOrcidEndpoint": "https://api.openalex.org/authors?filter=orcid:0000-0001-5385-2061",
+      "excludedWorks": [
+        {
+          "workId": "W7138830602",
+          "evidence": "GLOBECOM 2025 Probabilistic Representation for Robust Link Adaptation (10.1109/globecom59602.2025.11431979): Crossref상 Sang Hyun Lee 포함 저자 6명 전원이 Samsung Research 소속인 동명이인 (2026-11-27 확인)"
+        }
+      ],
       "knownDuplicates": [
         {
           "workId": "W2749129638",

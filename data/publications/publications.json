@@ -56,25 +56,6 @@
       "raw": "Hong Ki Kim, Sunho Kim, Yoon Ku Lee, and Sang Hyun Lee, \"Distributed Pilot Decontamination Enhancing Link Reliability in Industrial IoT Networks,\" IEEE Internet of Things Journal, early access, 2024"
     },
     {
-      "id": "legacy:journal-003",
-      "type": "journal",
-      "title": "Distributed Task Offloading in Mobile-Edge Computing With Virtual Machines",
-      "authors": [
-        "Hongju Lee",
-        "Sung Il Choi",
-        "Sang Hyun Lee",
-        "Mérouane Debbah",
-        "Inkyu Lee"
-      ],
-      "year": 2024,
-      "venue": "IEEE Internet of Things Journal",
-      "doi": null,
-      "url": null,
-      "status": "verified",
-      "source": "legacy",
-      "raw": "Hongju Lee, Sung Il Choi, Sang Hyun Lee, Mérouane Debbah, Inkyu Lee, \"Distributed Task Offloading in Mobile-Edge Computing With Virtual Machines,\" IEEE Internet of Things Journal, vol. 11, no. 13, pp. 24083-24097, July 2024"
-    },
-    {
       "id": "legacy:journal-004",
       "type": "journal",
       "title": "Examining Spatiotemporal Crowdsensing and Caching for population-dynamic OTT Content Delivery",
@@ -1683,25 +1664,6 @@
       "source": "openalex"
     },
     {
-      "id": "doi:10.1109/globecom59602.2025.11431979",
-      "type": "conference",
-      "title": "Probabilistic Representation for Robust Link Adaptation in Deep Reinforcement Learning-based 5G Systems",
-      "authors": [
-        "Juhwan Song",
-        "Yujin Nam",
-        "Minsuk Choi",
-        "Sang Hyun Lee",
-        "Jinguk Jeong",
-        "Seowoo Jang"
-      ],
-      "year": 2025,
-      "venue": null,
-      "doi": "10.1109/globecom59602.2025.11431979",
-      "url": "https://doi.org/10.1109/globecom59602.2025.11431979",
-      "status": "pending",
-      "source": "openalex"
-    },
-    {
       "id": "doi:10.48550/arxiv.2509.07492",
       "type": "journal",
       "title": "Constraint-Compliant Network Optimization through Large Language Models",
@@ -2009,7 +1971,7 @@
         "Sang Hyun Lee"
       ],
       "year": 2025,
-      "venue": null,
+      "venue": "2025 IEEE International Conference on Communications Workshops (ICC Workshops)",
       "doi": "10.1109/iccworkshops67674.2025.11162380",
       "url": "https://doi.org/10.1109/iccworkshops67674.2025.11162380",
       "status": "verified",
@@ -2098,7 +2060,7 @@
         "Sang Hyun Lee"
       ],
       "year": 2025,
-      "venue": null,
+      "venue": "2025 16th International Conference on Information and Communication Technology Convergence (ICTC)",
       "doi": "10.1109/ictc66702.2025.11387903",
       "url": "https://doi.org/10.1109/ictc66702.2025.11387903",
       "status": "verified",
@@ -2121,9 +2083,121 @@
       "url": "https://doi.org/10.1109/jiot.2024.3388452",
       "status": "verified",
       "source": "openalex"
+    },
+    {
+      "id": "doi:10.1109/gcwkshps68340.2025.11591095",
+      "type": "conference",
+      "title": "Toward Open RAN Resilience via Coordination Within RAN Architecture",
+      "authors": [
+        "Youngjin Song",
+        "Wookjin Lee",
+        "Sang Hyun Lee"
+      ],
+      "year": 2025,
+      "venue": "2025 IEEE Globecom Workshops (GC Wkshps)",
+      "doi": "10.1109/gcwkshps68340.2025.11591095",
+      "url": "https://doi.org/10.1109/gcwkshps68340.2025.11591095",
+      "status": "verified",
+      "source": "manual"
+    },
+    {
+      "id": "doi:10.1109/iccworkshops63917.2026.11586597",
+      "type": "conference",
+      "title": "A Testbed Implementation of LLM-Based Intent Coordination for Autonomous RAN Management",
+      "authors": [
+        "Wookjin Lee",
+        "Jungbum Lee",
+        "Gun Kim",
+        "Seungeui Byun",
+        "Sang Hyun Lee"
+      ],
+      "year": 2026,
+      "venue": "2026 IEEE International Conference on Communications Workshops (ICC Workshops)",
+      "doi": "10.1109/iccworkshops63917.2026.11586597",
+      "url": "https://doi.org/10.1109/iccworkshops63917.2026.11586597",
+      "status": "verified",
+      "source": "manual"
+    },
+    {
+      "id": "doi:10.1109/mcom.001.2500317",
+      "type": "journal",
+      "title": "A Unified Quantum Framework for Assignment Optimization in Network Administration",
+      "authors": [
+        "Yong Hun Jang",
+        "Junyoung Hwang",
+        "Wookjin Lee",
+        "Hee Soo Kim",
+        "Sang Hyun Lee"
+      ],
+      "year": 2025,
+      "venue": "IEEE Communications Magazine",
+      "doi": "10.1109/mcom.001.2500317",
+      "url": "https://doi.org/10.1109/mcom.001.2500317",
+      "status": "verified",
+      "source": "manual"
+    },
+    {
+      "id": "doi:10.1016/j.heares.2026.109598",
+      "type": "journal",
+      "title": "Translational framework combining machine learning and in vivo screening for aminoglycoside ototoxicity prevention",
+      "authors": [
+        "Eunjung Han",
+        "Yun Jae Choi",
+        "Hong Ki Kim",
+        "Yong Hun Jang",
+        "Yuji Cho",
+        "Saemi Park",
+        "June Choi",
+        "Sang Hyun Lee"
+      ],
+      "year": 2026,
+      "venue": "Hearing Research",
+      "doi": "10.1016/j.heares.2026.109598",
+      "url": "https://doi.org/10.1016/j.heares.2026.109598",
+      "status": "verified",
+      "source": "manual"
+    },
+    {
+      "id": "doi:10.26599/nr.2025.94907258",
+      "type": "journal",
+      "title": "Enhancing sound pressure output in graphene-based hybrid bone conduction hearing aids through electromagnetic and electrostatic integration",
+      "authors": [
+        "Dong-Kwan Lee",
+        "Hyunwoo Baek",
+        "Byung-Ho Kang",
+        "Jongchan Yoo",
+        "Kun-Woo Nam",
+        "Sang Hyun Lee",
+        "Illsoo Sohn",
+        "Eunjung Han",
+        "June Choi",
+        "Sung-Hoon Park"
+      ],
+      "year": 2025,
+      "venue": "Nano Research",
+      "doi": "10.26599/nr.2025.94907258",
+      "url": "https://doi.org/10.26599/nr.2025.94907258",
+      "status": "verified",
+      "source": "manual"
     }
   ],
   "patents": [
+    {
+      "id": "manual:patent-US12335023B2",
+      "title": "Time synchronization method and apparatus for low-orbit satellite cluster",
+      "inventors": [
+        "Sang Hyun Lee",
+        "Young Chai Ko",
+        "Yong Hun Jang",
+        "Jun Young Seo",
+        "Sun Ho Kim",
+        "Won Young Kang"
+      ],
+      "year": 2025,
+      "number": "US12,335,023 B2",
+      "country": "international",
+      "raw": "Time synchronization method and apparatus for low-orbit satellite cluster (Sang Hyun Lee, Young Chai Ko, Yong Hun Jang, Jun Young Seo, Sun Ho Kim, Won Young Kang): US12,335,023 B2 (06.17.2025)"
+    },
     {
       "id": "legacy:patent-international-001",
       "title": "Method, apparatuses and system for switching off power of base stations within a cellular network by using message passing",
@@ -2258,6 +2332,231 @@
       "number": "US7,093,189",
       "country": "international",
       "raw": "Method and device for performing soft decision decoding on Reed-Muller codes using decision by majority: US7,093,189 (08.15.2006)"
+    },
+    {
+      "id": "manual:patent-KR10-3042806",
+      "title": "다중 사용자 간 뇌파 공유 시스템 및 그 협력 제어 방법",
+      "inventors": [
+        "이상현",
+        "김건",
+        "이정범",
+        "강원영",
+        "장용훈"
+      ],
+      "year": 2026,
+      "number": "KR10-3042806",
+      "country": "domestic",
+      "raw": "다중 사용자 간 뇌파 공유 시스템 및 그 협력 제어 방법 (이상현, 김건, 이정범, 강원영, 장용훈): KR10-3042806 (10.30.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-3038404",
+      "title": "시공간 맥락을 고려한 콘텐츠 추천 방법 및 시스템",
+      "inventors": [
+        "이상현",
+        "김성철",
+        "김희수",
+        "장유미",
+        "최승일",
+        "이욱진",
+        "임철민"
+      ],
+      "year": 2026,
+      "number": "KR10-3038404",
+      "country": "domestic",
+      "raw": "시공간 맥락을 고려한 콘텐츠 추천 방법 및 시스템 (이상현, 김성철, 김희수, 장유미, 최승일, 이욱진, 임철민): KR10-3038404 (10.21.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-3035172",
+      "title": "모바일 캐싱 네트워크에서의 두 단계 D2D 링크를 통한 콘텐츠 탐색 및 공유 방법, 및 그 장치",
+      "inventors": [
+        "이상현",
+        "김성철",
+        "김희수",
+        "장유미",
+        "최승일"
+      ],
+      "year": 2026,
+      "number": "KR10-3035172",
+      "country": "domestic",
+      "raw": "모바일 캐싱 네트워크에서의 두 단계 D2D 링크를 통한 콘텐츠 탐색 및 공유 방법, 및 그 장치 (이상현, 김성철, 김희수, 장유미, 최승일): KR10-3035172 (10.14.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-3002901",
+      "title": "비지도 학습을 이용한 집단적 네트워크 최적화 방법 및 그 장치",
+      "inventors": [
+        "이상현",
+        "이욱진",
+        "김홍기"
+      ],
+      "year": 2026,
+      "number": "KR10-3002901",
+      "country": "domestic",
+      "raw": "비지도 학습을 이용한 집단적 네트워크 최적화 방법 및 그 장치 (이상현, 이욱진, 김홍기): KR10-3002901 (08.05.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-3000022",
+      "title": "수생 생물의 행동 분석 장치 및 방법",
+      "inventors": [
+        "최준",
+        "이상현",
+        "한은정",
+        "최윤재"
+      ],
+      "year": 2026,
+      "number": "KR10-3000022",
+      "country": "domestic",
+      "raw": "수생 생물의 행동 분석 장치 및 방법 (최준, 이상현, 한은정, 최윤재): KR10-3000022 (07.30.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-2997839",
+      "title": "이기종 다중 소유자 저궤도 위성 네트워크에서 블록체인을 이용한 시간 동기화 방법 및 그 장치",
+      "inventors": [
+        "이상현",
+        "고영채",
+        "장용훈",
+        "강원영",
+        "이윤구",
+        "오승현"
+      ],
+      "year": 2026,
+      "number": "KR10-2997839",
+      "country": "domestic",
+      "raw": "이기종 다중 소유자 저궤도 위성 네트워크에서 블록체인을 이용한 시간 동기화 방법 및 그 장치 (이상현, 고영채, 장용훈, 강원영, 이윤구, 오승현): KR10-2997839 (07.27.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-2990405",
+      "title": "스트론튬 라넬레이트를 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물",
+      "inventors": [
+        "최준",
+        "이상현",
+        "한은정",
+        "박새미",
+        "조유지",
+        "이혜진",
+        "최윤재"
+      ],
+      "year": 2026,
+      "number": "KR10-2990405",
+      "country": "domestic",
+      "raw": "스트론튬 라넬레이트를 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물 (최준, 이상현, 한은정, 박새미, 조유지, 이혜진, 최윤재): KR10-2990405 (07.08.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-2915762",
+      "title": "말산을 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물",
+      "inventors": [
+        "최준",
+        "이상현",
+        "한은정",
+        "박새미",
+        "조유지",
+        "이혜진",
+        "최윤재"
+      ],
+      "year": 2026,
+      "number": "KR10-2915762",
+      "country": "domestic",
+      "raw": "말산을 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물 (최준, 이상현, 한은정, 박새미, 조유지, 이혜진, 최윤재): KR10-2915762 (01.16.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-2915758",
+      "title": "칼슘 시트레이트 테트라하이드레이트를 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물",
+      "inventors": [
+        "최준",
+        "이상현",
+        "한은정",
+        "박새미",
+        "조유지",
+        "이혜진",
+        "최윤재"
+      ],
+      "year": 2026,
+      "number": "KR10-2915758",
+      "country": "domestic",
+      "raw": "칼슘 시트레이트 테트라하이드레이트를 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물 (최준, 이상현, 한은정, 박새미, 조유지, 이혜진, 최윤재): KR10-2915758 (01.16.2026)"
+    },
+    {
+      "id": "manual:patent-KR10-2857208",
+      "title": "분산화 에지 컴퓨팅 방법 및 장치",
+      "inventors": [
+        "이훈",
+        "이상현"
+      ],
+      "year": 2025,
+      "number": "KR10-2857208",
+      "country": "domestic",
+      "raw": "분산화 에지 컴퓨팅 방법 및 장치 (이훈, 이상현): KR10-2857208 (09.04.2025)"
+    },
+    {
+      "id": "manual:patent-KR10-2848315",
+      "title": "암모늄 락테이트를 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물",
+      "inventors": [
+        "최준",
+        "이상현",
+        "한은정",
+        "박새미",
+        "조유지",
+        "최윤재"
+      ],
+      "year": 2025,
+      "number": "KR10-2848315",
+      "country": "domestic",
+      "raw": "암모늄 락테이트를 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물 (최준, 이상현, 한은정, 박새미, 조유지, 최윤재): KR10-2848315 (08.14.2025)"
+    },
+    {
+      "id": "manual:patent-KR10-2847157",
+      "title": "글루타민을 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물",
+      "inventors": [
+        "최준",
+        "이상현",
+        "한은정",
+        "박새미",
+        "조유지",
+        "이혜진",
+        "최윤재"
+      ],
+      "year": 2025,
+      "number": "KR10-2847157",
+      "country": "domestic",
+      "raw": "글루타민을 유효성분으로 포함하는 난청 예방 또는 치료용 약학 조성물 (최준, 이상현, 한은정, 박새미, 조유지, 이혜진, 최윤재): KR10-2847157 (08.12.2025)"
+    },
+    {
+      "id": "manual:patent-KR10-2842977",
+      "title": "영상 분할 및 재결합을 통한 영상 송수신 방법 및 장치",
+      "inventors": [
+        "이상현",
+        "김희수",
+        "최승일"
+      ],
+      "year": 2025,
+      "number": "KR10-2842977",
+      "country": "domestic",
+      "raw": "영상 분할 및 재결합을 통한 영상 송수신 방법 및 장치 (이상현, 김희수, 최승일): KR10-2842977 (08.01.2025)"
+    },
+    {
+      "id": "manual:patent-KR10-2828545",
+      "title": "밀리미터파 환경 혼합형 다중 접속 시스템의 분산적 자원 할당 최적화 장치 및 방법",
+      "inventors": [
+        "이상현",
+        "이욱진",
+        "최승일",
+        "장용훈"
+      ],
+      "year": 2025,
+      "number": "KR10-2828545",
+      "country": "domestic",
+      "raw": "밀리미터파 환경 혼합형 다중 접속 시스템의 분산적 자원 할당 최적화 장치 및 방법 (이상현, 이욱진, 최승일, 장용훈): KR10-2828545 (06.27.2025)"
+    },
+    {
+      "id": "manual:patent-KR10-2794656",
+      "title": "딥러닝 기반 분산형 다목적 최적화 방법, 이를 위한 컴퓨터 프로그램 및 장치",
+      "inventors": [
+        "이훈",
+        "이상현"
+      ],
+      "year": 2025,
+      "number": "KR10-2794656",
+      "country": "domestic",
+      "raw": "딥러닝 기반 분산형 다목적 최적화 방법, 이를 위한 컴퓨터 프로그램 및 장치 (이훈, 이상현): KR10-2794656 (04.08.2025)"
     },
     {
       "id": "legacy:patent-domestic-001",

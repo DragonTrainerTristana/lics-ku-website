@@ -133,6 +133,9 @@ function isAuthorConfig(value: unknown): value is AuthorConfig {
     typeof author.name === "string" &&
     isAuthorIdArray(author.openAlexAuthorIds) &&
     (author.secondaryOpenAlexAuthorIds === undefined || isAuthorIdArray(author.secondaryOpenAlexAuthorIds, true)) &&
+    (author.excludedOpenAlexWorkIds === undefined ||
+      (isStringArray(author.excludedOpenAlexWorkIds) &&
+        author.excludedOpenAlexWorkIds.every((id) => /^W\d+$/.test(id)))) &&
     (author.knownDuplicateOpenAlexWorkIds === undefined ||
       (isStringArray(author.knownDuplicateOpenAlexWorkIds) &&
         author.knownDuplicateOpenAlexWorkIds.every((id) => /^W\d+$/.test(id)))) &&
@@ -252,6 +255,12 @@ export async function runPublicationUpdate(options: UpdateOptions = {}): Promise
         const workId = work.id.split("/").pop() ?? "";
         const paper = paperFromWork(work);
         if (!paper) {
+          summary.rejected += 1;
+          continue;
+        }
+
+        // Works a human confirmed belong to a different Sang Hyun Lee.
+        if (author.excludedOpenAlexWorkIds?.includes(workId)) {
           summary.rejected += 1;
           continue;
         }

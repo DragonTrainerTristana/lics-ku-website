@@ -5,6 +5,7 @@ export interface AuthorConfig {
   openAlexAuthorIds: string[];
   secondaryOpenAlexAuthorIds?: string[];
   knownDuplicateOpenAlexWorkIds?: string[];
+  excludedOpenAlexWorkIds?: string[];
   orcid?: string;
   institutionId: string;
   institutionName: string;

@@ -53,6 +53,8 @@
 
 새 PR의 잘못된 `pending` 또는 자동 `verified` 항목은 객체 전체를 삭제합니다. 이미 배포된 `verified` 항목을 지워야 한다면 원문을 다시 확인하고 삭제 이유를 PR 설명이나 커밋 메시지에 남깁니다. 다른 기존 `verified` 항목의 제목·저자·연도·venue·DOI와 `raw` 원문은 함께 고치지 않습니다.
 
+동명이인 논문을 지우기만 하면 다음 달 자동 수집 때 다시 `pending`으로 들어옵니다. 영구히 막으려면 그 논문의 OpenAlex 작업 ID(`W`로 시작, `https://api.openalex.org/works/doi:<DOI>`에서 확인)를 `data/publications/authors.json`의 `excludedOpenAlexWorkIds`에 추가하고, `identification.excludedWorks`에 근거를 남깁니다.
+
 같은 동명이인 분야가 반복 유입되면 `data/publications/authors.json`의 `excludedTopicKeywords`를 보강할 수 있습니다. 이때 실제 연구실의 제브라피시·나노복합체처럼 통신 외 연구 분야까지 막지 않는지 테스트와 다음 자동 수집 결과로 확인해야 합니다.
 
 ## 저자 ID 조사와 설정
