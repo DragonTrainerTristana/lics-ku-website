@@ -41,10 +41,6 @@ export const PHD_STUDENTS: Student[] = [
     name: "Gun Kim",
     github: "https://github.com/brandonkims",
   },
-  {
-    image: "/people/students/gwangsung-kim.jpg",
-    name: "GwangSung Kim",
-  },
 ];
 
 export const MASTER_STUDENTS: Student[] = [
@@ -60,4 +56,7 @@ export const MASTER_STUDENTS: Student[] = [
   },
 ];
 
-export const UNDERGRADUATE_STUDENTS: Student[] = [];
+export const UNDERGRADUATE_STUDENTS: Student[] = [
+  { name: "Seo Yunseo" },
+  { name: "Shin Hyemin" },
+];

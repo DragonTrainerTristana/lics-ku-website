@@ -52,7 +52,7 @@ const StudentsPage = () => {
       )}
       {UNDERGRADUATE_STUDENTS.length > 0 && (
         <StudentGrid
-          title="Undergraduate Researchers"
+          title="Undergraduate Researcher Candidates"
           count={UNDERGRADUATE_STUDENTS.length}
           students={UNDERGRADUATE_STUDENTS}
         />

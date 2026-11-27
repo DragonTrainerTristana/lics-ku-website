@@ -23,6 +23,7 @@ export const PHD_ALUMNIS: Alumni[] = [
     image: "/people/alumni/sungil-choi.jpg",
     name: "Sung Il Choi",
     website: "https://sites.google.com/view/kucsi",
+    field: "Postdoctoral Researcher, Korea University",
   },
 ];
 
